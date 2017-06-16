@@ -7,12 +7,11 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "devDependencies": {
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
-    "babel-preset-latest": "^6.0.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "cross-env": "^3.0.0",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.2",
+    "cross-env": "^5.0.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }
