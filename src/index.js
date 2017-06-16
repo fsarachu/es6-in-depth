@@ -1,3 +1,13 @@
-let name = 'World';
+import "babel-polyfill";
 
-console.log(`Hello ${name}`);
+function* myGenerator() {
+    yield 'h';
+    yield 'e';
+    yield 'l';
+    yield 'l';
+    yield 'o';
+}
+
+for (let obj of myGenerator()) {
+    console.log(obj);
+}
