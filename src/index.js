@@ -1,13 +1,12 @@
-import "babel-polyfill";
-
-function* myGenerator() {
-    yield 'h';
-    yield 'e';
-    yield 'l';
-    yield 'l';
-    yield 'o';
+// Rest parameters
+function containsAll(haystack, ...needles) {
+    for (let needle of needles) {
+        if (haystack.indexOf(needle) === -1) {
+            return false;
+        }
+    }
+    return true;
 }
 
-for (let obj of myGenerator()) {
-    console.log(obj);
-}
+console.log(`containsAll('apple', 'p', 'le') : ${containsAll('apple', 'p', 'le')}`);
+console.log(`containsAll('apple', 'c', 'le') : ${containsAll('apple', 'c', 'le')}`);
