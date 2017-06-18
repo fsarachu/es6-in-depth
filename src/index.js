@@ -15,5 +15,30 @@ function containsAll(haystack, ...needles) {
     return true;
 }
 
+console.log('---- Rest Parameters ----');
 console.log(`containsAll('apple', 'p', 'le') : ${containsAll('apple', 'p', 'le')}`);
 console.log(`containsAll('apple', 'c', 'le') : ${containsAll('apple', 'c', 'le')}`);
+console.log('');
+
+
+/**
+ * ---- Default Parameters ----
+ * Unlike Python, default value expressions are evaluated at function call time from left to right.
+ * Passing undefined is considered to be equivalent to not passing anything at all.
+ * A parameter without a default implicitly defaults to undefined.
+ */
+function animalSentence(animals2 = "tigers", animals3 = "bears") {
+    return `Lions and ${animals2} and ${animals3}! Oh my!`;
+}
+
+function animalSentenceFancy(animals2 = "tigers", animals3 = (animals2 === "bears") ? "wolves" : "bears") {
+    return `Lions and ${animals2} and ${animals3}! Oh my!`;
+}
+
+console.log('---- Default parameters ----');
+console.log(`animalSentence(): ${animalSentence()}`);
+console.log(`animalSentence("bunnies"): ${animalSentence("bunnies")}`);
+console.log(`animalSentenceFancy("bears"): ${animalSentenceFancy("bears")}`);
+console.log('');
+
+
